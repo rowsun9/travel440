@@ -5,9 +5,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
 }
-form {
-    float: right;
-}
 div.stars {
     width: 270px;
     display: inline-block;
@@ -49,11 +46,13 @@ label.star:before {
 }
 
 .header {
-    padding: 80px;
+    padding: 340px;
     text-align: center;
     background: #1abc9c;
     color: white;
-    background-image: url(backgroundimage.PNG)
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(backgroundimage2.jpg)
 }
 
 .header h1 {
@@ -103,8 +102,10 @@ label.star:before {
 }
 
 .content {
-    width:75%;
+    width:100%;
     background-color: white;
+    text-align: center;
+    float: right;
 }
 
 .clearfix::after {
@@ -114,18 +115,23 @@ label.star:before {
 }
 
 .column {
-    float: left;
-    padding: 15px;
+    padding: 5px;
 }
 
-form {
-    float: right;
-    font-size: 14px;
+.registerbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
 }
 
-h5 {
-    margin: 0;
-}
+    .registerbtn:hover {
+        opacity: 1;
+    }
 
 .fakeimg {
     background-color: #aaa;
@@ -153,8 +159,9 @@ h5 {
 
     .section-1 {
         height: 100vh;
-        background-image: url(backgroun.jpeg);
+        background-image: url(backgroundimage2.jpeg);
         background-attachment: fixed;
         background-size: cover;
     }
+
 }

@@ -1,0 +1,139 @@
+﻿session_start()
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact Us</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="yourtravelcss.css">
+    <style>
+       form{
+           width: 100%;
+           display: block;
+           font-size: 20px;
+           text-align: left;
+       }
+
+      input {
+         width: 600px;
+         margin-bottom: 40px;
+     }
+
+      textarea {
+         width: 600px;
+         border: none;
+         outline: none;
+         height: 150px;
+         color: black;
+         margin-bottom: 20px;
+         border: 1px solid #000000;
+         text-align: center;
+         size: 200px;
+     }
+
+      input[type="text"],
+      input[type="password"],
+      input[type="tel"],
+      input[type="email"],
+      input[type="date"] {
+         outline: none;
+         height: 30px;
+         color: black;
+         font-size: 16px;
+         margin-bottom: 20px;
+         border: 1px solid #000000;
+         text-align: center;
+         size: 100px;
+     }
+
+     input[type="submit"] {
+         width: 75%;
+         background-color: rgb(212, 106, 18);
+         color: white;
+         padding: 14px 20px;
+         opacity: .6;
+         margin: 8px 0;
+         border: none;
+         border-radius: 4px;
+         cursor: pointer;
+     }
+
+     input[type="submit"]:hover {
+         background-color: #c4764a;
+         }
+
+
+ </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome, to Your Travel</h1>
+        <p>Travel <b>Your</b> way.</p>
+    </div>
+
+    <div class="navbar">
+        <a href="index.php" class="active">Home</a>
+        <a href="review.php">Reviews/Ratings</a>
+        <a href="destinationlandingpage.php">Destinations</a>
+        <a href="suggestedforyou.php">Suggested for You</a>
+        <a href="myaccount.php">My Account</a>
+        <div style="text-align:right">
+            <?php
+            if (isset($_SESSION['username'])) {
+                echo "<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
+                    <p> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>";
+
+            } else {
+                    echo "<a href="registration.php" class="right">Sign up here!</a>
+                        <a href="login.php" class="right">Login Here!</a>";
+            }
+            ?>
+        </div>        <a href="review.html">Reviews/Ratings</a>
+        <a href="destinationlandingpage.html">Destinations</a>
+        <a href="suggestedforyou.html">Suggested for You</a>
+        <a href="myaccount.html">My Account</a>
+        <a href="registration.php" class="right">Sign up here!</a>
+        <a href="login.php" class="right">Login Here!</a>
+    </div>
+    <div class="clearfix">
+        <div class="column">
+            <div class="side column">
+                <h2>News/Updates</h2>
+                <h5>Full website launching soon!</h5>
+                <div><img src="webpage.png" alt="WebPage" style="height:200px;"></div>
+                <p>Stay tuned for more new/updates!</p>
+                <h3>More Stuff</h3>
+                <p>Talk about more stuff here</p>
+                <div class="fakeimg" style="height:60px;">some links to places</div><br>
+                <div class="fakeimg" style="height:60px;">some links to places</div><br>
+                <div class="fakeimg" style="height:60px;">some links to places</div>
+            </div>
+            <div class="content column">
+                <h1>Contact Us</h1>
+                <h4>Use the form below to report a bug.</h4>
+                <form action="/action_page.php">
+                Topic:
+                <input type="text" name="topic" /><br />
+                Description:
+                <textarea id="review" name="review"
+                rows="20"
+                cols="800" placeholder="Describe the bug you witnessed.."></textarea><br />
+                <h4>If you have any screenshots of the bug please upload them here.</h4>
+                <input type="file" id="myFile" name="filename">
+                <input type="submit" value="Send" >
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <a href="aboutus.html">About Us</a>
+        <a href="forum.html">Forums</a>
+        <a href="contactus.html">Contact Us</a>
+        <a href="reportabug.html">Report A Bug</a>
+        <a href="careers.html">Careers</a>
+    </div>
+
+</body>
+</html>
