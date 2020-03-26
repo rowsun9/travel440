@@ -6,34 +6,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="yourtravelcss.css">
+    <style>
+       form{
+           width: 100%;
+           display: block;
+           font-size: 20px;
+           text-align: left;
+       }
+
+      input {
+         width: 600px;
+         margin-bottom: 40px;
+     }
+
+      textarea {
+         width: 600px;
+         border: none;
+         outline: none;
+         height: 150px;
+         color: black;
+         margin-bottom: 20px;
+         border: 1px solid #000000;
+         text-align: center;
+         size: 200px;
+     }
+
+      input[type="text"],
+      input[type="password"],
+      input[type="tel"],
+      input[type="email"],
+      input[type="date"] {
+         outline: none;
+         height: 30px;
+         color: black;
+         font-size: 16px;
+         margin-bottom: 20px;
+         border: 1px solid #000000;
+         text-align: center;
+         size: 100px;
+     }
+
+     input[type="submit"] {
+         width: 75%;
+         background-color: rgb(212, 106, 18);
+         color: white;
+         padding: 14px 20px;
+         opacity: .6;
+         margin: 8px 0;
+         border: none;
+         border-radius: 4px;
+         cursor: pointer;
+     }
+
+     input[type="submit"]:hover {
+         background-color: #c4764a;
+         }
+
+
+ </style>
 </head>
 <body>
     <div class="header">
-        <h1>Welcome, to Your Travel</h1>
-        <p>Travel <b>Your</b> way.</p>
-        <form>
-            Username:
-            <input type="text" name="firstname">
-            Password:
-            <input type="password" name="password"><br>
-            <div style="text-align:center">
-                <input type="submit" value="Submit" style="margin-top: 10px;" />
-            </div>
-        </form>
+        <div><h1>Welcome, to Your Travel</h1>
+            <p>Travel <b>Your</b> way.</div>
     </div>
 
     <div class="navbar">
         <a href="homepage.html" class="active">Home</a>
-        <a href="#reviews">Reviews/Ratings</a>
+        <a href="review.html">Reviews/Ratings</a>
         <a href="destinationlandingpage.html">Destinations</a>
         <a href="suggestedforyou.html">Suggested for You</a>
         <a href="myaccount.html">My Account</a>
-        <a href="signupform.html" class="right">Sign up here!</a>
+        <a href="signupfor.html" class="right">Sign up here!</a>
         <a href="loginpage.html" class="right">Login Here!</a>
     </div>
     <div class="clearfix">
-        <div class="column">
-            <div class="side column">
+        <div class="row">
+            <div class="side">
                 <h2>News/Updates</h2>
                 <h5>Full website launching soon!</h5>
                 <div><img src="webpage.png" alt="WebPage" style="height:200px;"></div>
@@ -44,22 +93,20 @@
                 <div class="fakeimg" style="height:60px;">some links to places</div><br>
                 <div class="fakeimg" style="height:60px;">some links to places</div>
             </div>
-            <div class="content column">
-                <h2>Contact Us</h2>
-                <h4>Use the form below to report a bug.</h4>
-                <div>
+            <div class="main">
+                <h1>Report A Bug</h1>
+                <h4>Use the form below to report a bug. We try our best to create a great site but it won't be perfect.</h4>
                 <form action="/action_page.php">
-                Topic:
+                Topic: <br>
                 <input type="text" name="topic" /><br />
-                Description:
+                Description: <br>
                 <textarea id="review" name="review"
-                rows="2"
-                cols="80">Describe the bug you witnessed..</textarea><br />
+                rows="20"
+                cols="800" placeholder="Describe the bug you witnessed.."></textarea><br />
                 <h4>If you have any screenshots of the bug please upload them here.</h4>
                 <input type="file" id="myFile" name="filename">
                 <input type="submit" value="Send" >
                 </form>
-                </div>
             </div>
         </div>
     </div>

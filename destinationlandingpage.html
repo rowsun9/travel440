@@ -3,28 +3,201 @@
 <head>
     <title>Welcome, to Your Travel</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="yourtravelcss.css">
+    <style>
+        .parallaxtext {
+          background-color: white;
+          min-height: 815px; 
+          background-attachment: fixed;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        .parallax1 {
+          background-image: url("st.augustine1.jpg");
+          min-height: 815px; 
+          background-attachment: fixed;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        .parallax2 {
+          background-image: url("st.augustine2.jpg");
+          min-height: 815px; 
+          background-attachment: fixed;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        .parallax3 {
+          background-image: url("st.augustine3.jpg");
+          min-height: 815px; 
+          background-attachment: fixed;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        .parallax4 {
+          background-image: url("st.augustine4.jpg");
+          min-height: 815px; 
+          background-attachment: fixed;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        .parallax5 {
+          background-image: url("st.augustine5.jpg");
+          min-height: 815px; 
+          background-attachment: fixed;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        .overlay {
+          height: 100%;
+          width: 100%;
+          display: none;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          background-color: rgb(0,0,0);
+          background-color: rgba(0,0,0, 0.9);
+        }
+
+        .overlay-content {
+          position: relative;
+          top: 46%;
+          width: 80%;
+          text-align: center;
+          margin-top: 30px;
+          margin: auto;
+        }
+
+        .overlay .closebtn {
+          position: absolute;
+          top: 20px;
+          right: 45px;
+          font-size: 60px;
+          cursor: pointer;
+          color: white;
+        }
+
+        .overlay .closebtn:hover {
+          color: #ccc;
+        }
+
+        .overlay input[type=text] {
+          padding: 15px;
+          font-size: 17px;
+          border: none;
+          float: left;
+          width: 80%;
+          background: white;
+        }
+
+        .overlay input[type=text]:hover {
+          background: #f1f1f1;
+        }
+
+        .overlay button {
+          float: left;
+          width: 20%;
+          padding: 15px;
+          background: #ddd;
+          font-size: 17px;
+          border: none;
+          cursor: pointer;
+        }
+
+        .overlay button:hover {
+          background: #bbb;
+        }
+
+        span {
+          text-decoration: underline;
+        }
+        .destinations {
+          min-height: 815px;
+        }
+        .fadein { 
+            text-align: center;
+            animation: fadeInAnimation ease 3s; 
+            animation-iteration-count: 1; 
+            animation-fill-mode: forwards; 
+        }
+
+        .fadein2 { 
+            text-align: center;
+            animation: fadeInAnimation ease 3s; 
+            animation-delay: 1s;
+            animation-iteration-count: 1; 
+            animation-fill-mode: forwards;
+        }
+
+        .fadein3 { 
+            text-align: center;
+            animation: fadeInAnimation ease 3s; 
+            animation-delay: 2s;
+            animation-iteration-count: 1; 
+            animation-fill-mode: forwards;
+        }
+
+        .fadein4 { 
+            text-align: center;
+            animation: fadeInAnimation ease 3s; 
+            animation-delay: 3s;
+            animation-iteration-count: 1; 
+            animation-fill-mode: forwards;
+        }
+        @keyframes fadeInAnimation { 
+            0% { 
+                opacity: 0; 
+            } 
+            100% { 
+                opacity: 1; 
+            } 
+        } 
+
+        .header p {
+          color: rgb(49, 42, 42);
+          font-size: 45px;
+          opacity: 0;
+          font-family: Jazz LET, fantasy;
+        }
+        </style>
 </head>
 <body>
+  <script>
+  
+  function openSearch() {
+    document.getElementById("myOverlay").style.display = "block";
+  }
+  
+  // Close the full screen search box
+  function closeSearch() {
+    document.getElementById("myOverlay").style.display = "none";
+  }
+  
+  </script>
     <div class="header">
-        <h1>Welcome, to Your Travel</h1>
-        <p>Travel <b>Your</b> way.</p>
-        <form>
-            Username:
-            <input type="text" name="firstname">
-            Password:
-            <input type="password" name="password"><br>
-            <div style="text-align:center">
-                <input type="submit" value="Submit" style="margin-top: 10px;" />
-            </div>
-        </form>
-    </div>
+      <div>
+        <br>
+        <p class="fadein">Welcome to Your Travel</p>
+        <br><br>
+        <p class="fadein2">This is Travel <b>Your </b>Way</p>
+        <br><br>
+        <p class="fadein3">Take a look at the featured destination below.</p>
+        <br><br>
+        <p class="fadein4">Or use the link below to use the search bar.</p>
+        </div>
+      </div>
 
     <div class="navbar">
         <a href="homepage.html" class="active">Home</a>
-        <a href="#reviews">Reviews/Ratings</a>
+        <a href="review.html">Reviews/Ratings</a>
         <a href="destinationlandingpage.html">Destinations</a>
         <a href="suggestedforyou.html">Suggested for You</a>
         <a href="myaccount.html">My Account</a>
@@ -32,24 +205,57 @@
         <a href="loginpage.html" class="right">Login Here!</a>
     </div>
     <div class="clearfix">
-        <div class="collum">
-            <div class="side column">
-                <h2>News/Updates</h2>
-                <h5>Full website launching soon!</h5>
-                <div><img src="webpage.png" alt="WebPage" style="height:200px;"></div>
-                <p>Stay tuned for more new/updates!</p>
-                <h3>More Stuff</h3>
-                <p>Talk about more stuff here</p>
-                <div class="fakeimg" style="height:60px;">some links to places</div><br>
-                <div class="fakeimg" style="height:60px;">some links to places</div><br>
-                <div class="fakeimg" style="height:60px;">some links to places</div>
-            </div>
-            <div class="content column">
-                <h2>Travel Destinations!</h2>
-                <input type="text" placeholder="Search Destinations...">
-                <button type="submit" float="right"><i class="fa fa-search"></i></button>
+        <div class="row destinations">
+            <div class="main destination">
+                <h2>Welcome to the Destinations Page!</h2>
+                <span class="openBtn" onclick="openSearch()">Click here to open the search bar or scroll down to view the featured destination for the week.</span>
+                <div id="myOverlay" class="overlay">
+                  <span class="closebtn" onclick="closeSearch()" title="Close Overlay">x</span>
+                  <div class="overlay-content">
+                    <form action="action_page.php">
+                      <input type="text" placeholder="Search.." name="search">
+                      <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                  </div>
+                </div>
+                
+                <br><br><br>
+                <br><br><br>
+                <h3>St. Augustine, Florida (This will change based on the weekly changing dstination.)</h3>
+                <p>St. Augustine (From Spanish: San Agustín) is a city in the Southeastern United States, 
+                  on the Atlantic coast of northeastern Florida. Founded in 1565 by Spanish explorers, 
+                  it is the oldest continuously inhabited European-established settlement in the contiguous United States.<br><br>
+
+                  St. Augustine was founded on September 8, 1565, by Spanish admiral Pedro Menéndez de Avilés, 
+                  Florida's first governor. He named the settlement "San Agustín", as his ships bearing settlers, 
+                  troops, and supplies from Spain had first sighted land in Florida eleven days earlier on August 28, 
+                  the feast day of St. Augustine. The city served as the capital of Spanish Florida for over 200 years. 
+                  It was designated as the capital of British East Florida when the colony was established in 1763; 
+                  Great Britain returned Florida to Spain in 1783.<br><br>
+                  
+                  Spain ceded Florida to the United States in 1819, and St. Augustine was designated the capital of the 
+                  Florida Territory upon ratification of the Adams–Onís Treaty in 1821. The Florida National Guard made the 
+                  city its headquarters that same year. The territorial government moved and made Tallahassee the capital of Florida in 1824.<br><br>
+                  
+                  The county seat of St. Johns County, St. Augustine is part of Florida's First Coast region and the Jacksonville metropolitan area. 
+                  Since the late 19th century, St. Augustine's distinct historical character has made the city a tourist attraction.</p>
+
             </div>
         </div>
+        <div class="parallax1"></div>
+        <div class="parallaxtext">
+            <h2>St. Augustine, Florida</h2>
+            <p>St. Augustine is a wonderful travel destination for everyone.
+                Overall, it is fun historical type of destination.
+            </p>
+            <p>More stuff here and there. Obviously we will make this look a lot better.</p>
+            <p>Please continue to scroll down to view our gallery of photos of the destination.</p>
+        </div>
+        <div class="parallax2"></div>
+        <div class="parallax3"></div>
+        <div class="parallax4"></div>
+        <div class="parallax5"></div>
+
         <div class="footer">
             <a href="aboutus.html">About Us</a>
             <a href="forum.html">Forums</a>

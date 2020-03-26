@@ -9,16 +9,9 @@
 </head>
 <body>
 <div class="header">
-  <h1>Welcome, to Your Travel</h1>
-  <p>Travel <b>Your</b> way.</p>
-      <form>Username:
-      <input type="text" name="firstname">
-      Password:
-      <input type="password" name="password"><br>
-      <div style="text-align:center">  
-        <input type="submit" value="Submit" style="margin-top: 10px;"/>
-      </div>
-      </form>
+  <div><h1>Welcome, to Your Travel</h1>
+    <p>Travel <b>Your</b> way.
+    </div>
 </div>
 
 <div class="navbar">
@@ -31,8 +24,8 @@
     <a href="loginpage.html" class="right">Login Here!</a>
 </div>
 <div class="clearfix">
-<div class="column">
-  <div class="side column">
+<div class="row">
+  <div class="side">
     <h2>News/Updates</h2>
     <h5>Full website launching soon!</h5>
     <div><img src="webpage.png" alt="WebPage" style="height:200px;"></div>
@@ -43,21 +36,193 @@
     <div class="fakeimg" style="height:60px;">some links to places</div><br>
     <div class="fakeimg" style="height:60px;">some links to places</div>
   </div>
-  <div class="content column">
+  <div class="main review">
     <h2>Write a Review</h2>
     <p>Use the form below to leave a review of a destination you have been to!</p>
-      <form>
-          Destination:
-          <input type="text" name="destination" /><br />
-          Title:
-          <input type="text" name="title" /><br />
-          Review:
-          <textarea id="review" name="review"
+      <form class="review">
+          Destination:<br>
+          <input class="review" type="text" name="destination" /><br />
+          Title:<br>
+          <input class="review" type="text" name="title" /><br />
+          Review:<br>
+          <textarea class="review" id="review" name="review" placeholder="Leave Your Review Here.."
           rows="2"
-          cols="80">Leave Your Review Here..</textarea><br />
+          cols="80"></textarea><br /><br> <br>
+          <p>Use the sliders below to give your input on the folowing categories.</p>
+          <div>
+            <p>Cleanliness:</p>
+          <div class="slidecontainer">
+            <input type="range" min="1" max="10" value="50" class="slider" id="Cleanliness">
+            <p>Value: <span id= "range1"></span></p>
+          </div>
+
+          <script>
+            var slider1 = 
+            document.getElementById("Cleanliness");
+            var output1 = 
+            document.getElementById("range1");
+            output1.innerHTML = slider1.value;
+          
+            slider1.oninput = function() {
+              output1.innerHTML = this.value;
+            }
+          </script>
+
+
+          <p>Friendliness:</p>
+          <div class="slidecontainer">
+            <input type="range" min="1" max="10" value="50" class="slider" id="Friendliness">
+            <p>Value: <span id= "range2"></span></p>
+          </div>
+          <script>
+            var slider2 = 
+            document.getElementById("Friendliness");
+            var output2 = 
+            document.getElementById("range2");
+            output2.innerHTML = slider2.value;
+          
+            slider2.oninput = function() {
+              output2.innerHTML = this.value;
+            }
+          </script>
+
+    
+          <p>Historical Sites:</p>
+          <div class="slidecontainer">
+            <input type="range" min="1" max="10" value="50" class="slider" id="HistoricalSites">
+            <p>Value: <span id= "range3"></span></p>
+          </div>
+          <script>
+            var slider3 = 
+            document.getElementById("HistoricalSites");
+            var output3 = 
+            document.getElementById("range3");
+            output3.innerHTML = slider3.value;
+          
+            slider3.oninput = function() {
+              output3.innerHTML = this.value;
+            }
+          </script>
+
+
+          <p>Food:</p>
+          <div class="slidecontainer">
+            <input type="range" min="1" max="10" value="50" class="slider" id="Food">
+            <p>Value: <span id= "range4"></span></p>
+          </div>
+
+          <script>
+            var slider4 = 
+            document.getElementById("Food");
+            var output4 = 
+            document.getElementById("range4");
+            output4.innerHTML = slider4.value;
+          
+            slider4.oninput = function() {
+              output4.innerHTML = this.value;
+            }
+          </script>
+
+
+          <p>Tourist Attractions:</p>
+          <div class="slidecontainer">
+            <input type="range" min="1" max="10" value="50" class="slider" id="TouristAttractions">
+            <p>Value: <span id= "range5"></span></p>
+          </div>
+
+          <script>
+            var slider5 = 
+            document.getElementById("TouristAttractions");
+            var output5 = 
+            document.getElementById("range5");
+            output5.innerHTML = slider5.value;
+          
+            slider5.oninput = function() {
+              output5.innerHTML = this.value;
+            }
+          </script>
+
+        
+          <p>Transporation:</p>
+          <div class="slidecontainer">
+            <input type="range" min="1" max="10" value="50" class="slider" id="Transportation">
+            <p>Value: <span id= "range6"></span></p>
+          </div>
+
+          <script>
+            var slider6 = 
+            document.getElementById("Transportation");
+            var output6 = 
+            document.getElementById("range6");
+            output6.innerHTML = slider6.value;
+          
+            slider6.oninput = function() {
+              output6.innerHTML = this.value;
+            }
+          </script>
+
+
+          <p>Cost:</p>
+          <div class="slidecontainer">
+            <input type="range" min="1" max="10" value="50" class="slider" id="Cost">
+            <p>Value: <span id= "range7"></span></p>
+          </div>
+
+          <script>
+            var slider7 = 
+            document.getElementById("Cost");
+            var output7 = 
+            document.getElementById("range7");
+            output7.innerHTML = slider7.value;
+          
+            slider7.oninput = function() {
+              output7.innerHTML = this.value;
+            }
+          </script>
+
+
+          <p>Hotels:</p>
+          <div class="slidecontainer">
+            <input type="range" min="1" max="10" value="50" class="slider" id="Hotels">
+            <p>Value: <span id= "range8"></span></p>
+          </div>
+
+          <script>
+            var slider8 = 
+            document.getElementById("Hotels");
+            var output8 = 
+            document.getElementById("range8");
+            output8.innerHTML = slider8.value;
+          
+            slider8.oninput = function() {
+              output8.innerHTML = this.value;
+            }
+          </script>
+
+
+          <p>Fun Activities:</p>
+          <div class="slidecontainer">
+            <input type="range" min="1" max="10" value="50" class="slider" id="FunActivities">
+            <p>Value: <span id= "range9"></span></p>
+          </div>
+
+          <script>
+            var slider9 = 
+            document.getElementById("FunActivities");
+            var output9 = 
+            document.getElementById("range9");
+            output9.innerHTML = slider9.value;
+          
+            slider9.oninput = function() {
+              output9.innerHTML = this.value;
+            }
+          </script>
+
+
+          </div>
           Star Rating:
       </form>
-          <div class="stars" style="float:right">
+          <div class="stars" style="float:left">
           <form action="">
             <input class="star star-5" id="star-5" type="radio" name="star"/>
             <label class="star star-5" for="star-5"></label>
@@ -82,6 +247,5 @@
   <a href="reportabug.html">Report A Bug</a>
   <a href="careers.html">Careers</a>
 </div>
-
 </body>
 </html>

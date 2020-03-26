@@ -6,25 +6,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="yourtravelcss.css">
+    <style>
+        form{
+            width: 50%;
+            display: block;
+            font-size: 20px;
+            top: 50%;
+            left: 50%;
+            float: center;
+            margin: 0 auto;
+            width: 700px;
+        }
+ 
+       input {
+          width: 400px;
+          margin-bottom: 40px;
+      }
+ 
+       textarea {
+          width: 600px;
+          border: none;
+          outline: none;
+          height: 150px;
+          color: black;
+          margin-bottom: 20px;
+          border: 1px solid #000000;
+          text-align: center;
+          size: 200px;
+          margin-left: 60px;
+      }
+ 
+       input[type="text"],
+       input[type="password"],
+       input[type="tel"],
+       input[type="email"],
+       input[type="date"] {
+          outline: none;
+          height: 30px;
+          color: black;
+          font-size: 16px;
+          margin-bottom: 50px;
+          margin-left: 60px;
+          border: 1px solid #000000;
+          text-align: center;
+          size: 200px;
+          width: 600px;
+          height: 40px;
+      }
+ 
+      input[type="submit"] {
+          width: 600px;
+          background-color: rgb(212, 106, 18);
+          color: white;
+          padding: 14px 20px;
+          opacity: .6;
+          margin: 8px 0;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          margin-left: 50px;
+      }
+ 
+      input[type="submit"]:hover {
+          background-color: #c4764a;
+          }
+      h4 {
+          text-align: center;
+      }
+
+      h2 {
+          text-align: center;
+      }
+
+      p {
+          
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+      }
+      
+  </style>
 </head>
 <body>
     <div class="header">
-        <h1>Welcome, to Your Travel</h1>
-        <p>Travel <b>Your</b> way.</p>
-        <form>
-            Username:
-            <input type="text" name="firstname">
-            Password:
-            <input type="password" name="password"><br>
-            <div style="text-align:center">
-                <input type="submit" value="Submit" style="margin-top: 10px;" />
-            </div>
-        </form>
+        <div><h1>Welcome, to Your Travel</h1>
+            <p>Travel <b>Your</b> way.</div>
     </div>
 
     <div class="navbar">
         <a href="homepage.html" class="active">Home</a>
-        <a href="#reviews">Reviews/Ratings</a>
+        <a href="review.html">Reviews/Ratings</a>
         <a href="destinationlandingpage.html">Destinations</a>
         <a href="suggestedforyou.html">Suggested for You</a>
         <a href="myaccount.html">My Account</a>
@@ -32,28 +103,17 @@
         <a href="loginpage.html" class="right">Login Here!</a>
     </div>
     <div class="clearfix">
-        <div class="column">
-            <div class="side column">
-                <h2>News/Updates</h2>
-                <h5>Full website launching soon!</h5>
-                <div><img src="webpage.png" alt="WebPage" style="height:200px;"></div>
-                <p>Stay tuned for more new/updates!</p>
-                <h3>More Stuff</h3>
-                <p>Talk about more stuff here</p>
-                <div class="fakeimg" style="height:60px;">some links to places</div><br>
-                <div class="fakeimg" style="height:60px;">some links to places</div><br>
-                <div class="fakeimg" style="height:60px;">some links to places</div>
-            </div>
-            <div class="content column">
+        <div class="row">
+            <div class="main">
                 <h2>Contact Us</h2>
                 <h4>Use the form below to send us a message.</h4>
                 <form>
-                Topic:
-                <input type="text" name="topic" /><br />
-                Message:                
-                <textarea id="review" name="review"
-                rows="2"
-                cols="80">Type Your Message Here..</textarea><br />
+                <p>Topic:</p>
+                <input type="text" name="topic" placeholder="Tell us what the topic of your message is.." /><br />               
+                <p>Message:</p><br>
+                <textarea id="contactmessage" name="contactmessage"
+                rows="20"
+                cols="800" placeholder="Type your message here.."></textarea><br />
                 <input type="submit" value="Send" >
                 </form>
             </div>

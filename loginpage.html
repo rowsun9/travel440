@@ -4,8 +4,6 @@
     <title>Welcome, to Your Travel</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="yourtravelcss.css">
     <style>
         body
         {
@@ -15,14 +13,18 @@
             background-size: cover;
             font-family: sans-serif;
         }
+        .links {
+            text-align: center;
+            font-size: 30px;
+        }
         .loginBox
         {
             position: absolute;
-            top: 40%;
-            left: 40%;
-            transform: translate(-50%. -50%);
-            width: 350px;
-            height: 420px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 450px;
+            height: 520px;
             padding: 80px 40px;
             box-sizing: border-box;
             background: rgba(0,0,0,.5);
@@ -30,17 +32,18 @@
         .user
         {
             width: 100px;
-            height: 100px;
+            height: 90px;
             overflow: hidden;
             position: absolute;
             border-radius: 50%;
             top: -50px;
-            left: 125px;
+            left: 180px;
+            opacity: .3;
         }
         h2
         {
             margin: 0;
-            padding: 0 0 20px;
+            padding: 0 0 70px;
             color: #efed40;
             text-align: center;
         }
@@ -66,10 +69,6 @@
             color: #fff;
             font-size: 16px;
         }
-        ::placeholder
-        {
-            color: rgba(255, 255, 255, .5);
-        }
         .loginBox input[type="submit"]
         {
             border: none;
@@ -80,6 +79,7 @@
             background: #efed40;
             cursor: pointer;
             border-radius: 20px;
+            margin-bottom: 40px;
         }
         .loginBox input[type="submit"]:hover
         {
@@ -104,79 +104,20 @@
 <body>
 
     <div class="loginBox">
-        <img scr="user.png" class="user" />
+        <a href="homepage.html"><img src="user.png" class="user" /></a>
         <h2>Log In Here</h2>
-        <form>
-            <p>Email</p>
-            <input type="text" name="" placeholder="Enter Email" />
+        <form method="post" action="login.php">
+            <p>Username</p>
+            <input type="text" name="username" placeholder="Enter Username" />
             <p>Password</p>
-            <input type="text" name="" placeholder="******" />
-            <input type="submit" name="" value="Sign In"/>
-            <a hred="forgotpassword.html">Forgot Password</a>
-
+            <input type="text" name="password" placeholder="********" />
+            <input type="submit" name="login_user" value="Sign In"/>
+            <div class="links">
+            <a href="forgotpassword.html">Forgot Password</a>
+            <a style="padding:20px" href="signupform.html">Sign Up Here</a>
+            </div>
         </form>
     </div>
 
 </body>
 </html>
-
-
-   <!-- <div class="header">
-        <h1>Welcome, to Your Travel</h1>
-        <p>Travel <b>Your</b> way.</p>
-        <form>
-            Username:
-            <input type="text" name="firstname">
-            Password:
-            <input type="password" name="password"><br>
-            <div style="text-align:center">
-                <input type="submit" value="Submit" style="margin-top: 10px;" />
-            </div>
-        </form>
-    </div>
-
-    <div class="navbar">
-        <a href="homepage.html" class="active">Home</a>
-        <a href="#reviews">Reviews/Ratings</a>
-        <a href="destinationlandingpage.html">Destinations</a>
-        <a href="suggestedforyou.html">Suggested for You</a>
-        <a href="myaccount.html">My Account</a>
-        <a href="signupform.html" class="right">Sign up here!</a>
-        <a href="loginpage.html" class="right">Login Here!</a>
-    </div>
-    <div class="clearfix">
-        <div class="column">
-            <div class="side column">
-                <h2>News/Updates</h2>
-                <h5>Full website launching soon!</h5>
-                <div><img src="webpage.png" alt="WebPage" style="height:200px;"></div>
-                <p>Stay tuned for more new/updates!</p>
-                <h3>More Stuff</h3>
-                <p>Talk about more stuff here</p>
-                <div class="fakeimg" style="height:60px;">some links to places</div><br>
-                <div class="fakeimg" style="height:60px;">some links to places</div><br>
-                <div class="fakeimg" style="height:60px;">some links to places</div>
-            </div>
-            <div class="content column">
-                <form>
-                    Username:
-                    <input type="text" name="firstname"><br />
-                    Password:
-                    <input type="password" name="password"><br>
-                    <div style="text-align:center">
-                    <input type="submit" value="Submit" style="margin-top: 10px;" />
-                    <a href="forgotpassword.html">Forgot Password/Username?</a>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer">
-        <a href="aboutus.html">About Us</a>
-        <a href="forum.html">Forums</a>
-        <a href="contactus.html">Contact Us</a>
-        <a href="reportabug.html">Report A Bug</a>
-        <a href="careers.html">Careers</a>
-    </div>
--->
