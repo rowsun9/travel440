@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿session_start()
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Contact Us</title>
@@ -8,14 +9,10 @@
     <link rel="stylesheet" type="text/css" href="yourtravelcss.css">
     <style>
         form{
-            width: 50%;
+            width: 100%;
             display: block;
             font-size: 20px;
-            top: 50%;
-            left: 50%;
-            float: center;
-            margin: 0 auto;
-            width: 700px;
+            text-align: center;
         }
  
        input {
@@ -24,7 +21,7 @@
       }
  
        textarea {
-          width: 600px;
+          width: 400px;
           border: none;
           outline: none;
           height: 150px;
@@ -33,7 +30,7 @@
           border: 1px solid #000000;
           text-align: center;
           size: 200px;
-          margin-left: 60px;
+          margin-left: 100px;
       }
  
        input[type="text"],
@@ -46,16 +43,14 @@
           color: black;
           font-size: 16px;
           margin-bottom: 50px;
-          margin-left: 60px;
+          margin-left: 115px;
           border: 1px solid #000000;
           text-align: center;
-          size: 200px;
-          width: 600px;
-          height: 40px;
+          size: 100px;
       }
  
       input[type="submit"] {
-          width: 600px;
+          width: 50%;
           background-color: rgb(212, 106, 18);
           color: white;
           padding: 14px 20px;
@@ -70,27 +65,14 @@
       input[type="submit"]:hover {
           background-color: #c4764a;
           }
-      h4 {
-          text-align: center;
-      }
-
-      h2 {
-          text-align: center;
-      }
-
-      p {
-          
-        margin: 0;
-        padding: 0;
-        font-weight: bold;
-      }
-      
+ 
+ 
   </style>
 </head>
 <body>
     <div class="header">
-        <div><h1>Welcome, to Your Travel</h1>
-            <p>Travel <b>Your</b> way.</div>
+        <h1>Welcome, to Your Travel</h1>
+        <p>Travel <b>Your</b> way.</p>
     </div>
 
     <div class="navbar">
@@ -99,18 +81,16 @@
         <a href="destinationlandingpage.html">Destinations</a>
         <a href="suggestedforyou.html">Suggested for You</a>
         <a href="myaccount.html">My Account</a>
-        <a href="signupform.html" class="right">Sign up here!</a>
-        <a href="loginpage.html" class="right">Login Here!</a>
+        <a href="registration.php" class="right">Sign up here!</a>
+        <a href="login.php" class="right">Login Here!</a>
     </div>
     <div class="clearfix">
-        <div class="row">
-            <div class="main">
+        <div class="column">
+            <div class="content">
                 <h2>Contact Us</h2>
                 <h4>Use the form below to send us a message.</h4>
                 <form>
-                <p>Topic:</p>
                 <input type="text" name="topic" placeholder="Tell us what the topic of your message is.." /><br />               
-                <p>Message:</p><br>
                 <textarea id="contactmessage" name="contactmessage"
                 rows="20"
                 cols="800" placeholder="Type your message here.."></textarea><br />

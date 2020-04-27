@@ -1,4 +1,5 @@
-﻿<DOCTYPE html>
+﻿session_start()
+DOCTYPE html>
 <html lang="en">
 <head>
     <title>Welcome, to Your Travel</title>
@@ -9,8 +10,17 @@
 </head>
 <body>
     <div class="header">
-        <div><h1>Welcome, to Your Travel</h1>
-            <p>Travel <b>Your</b> way.</div>
+        <h1>Welcome, to Your Travel</h1>
+        <p>Travel <b>Your</b> way.</p>
+        <form>
+            Username:
+            <input type="text" name="firstname">
+            Password:
+            <input type="password" name="password"><br>
+            <div style="text-align:center">
+                <input type="submit" value="Submit" style="margin-top: 10px;" />
+            </div>
+        </form>
     </div>
 
     <div class="navbar">
@@ -23,8 +33,8 @@
         <a href="login.php" class="right">Login Here!</a>
     </div>
     <div class="clearfix">
-        <div class="row">
-            <div class="side">
+        <div class="column">
+            <div class="side column">
                 <h2>News/Updates</h2>
                 <h5>Full website launching soon!</h5>
                 <div><img src="webpage.png" alt="WebPage" style="height:200px;"></div>
@@ -35,7 +45,7 @@
                 <div class="fakeimg" style="height:60px;">some links to places</div><br>
                 <div class="fakeimg" style="height:60px;">some links to places</div>
             </div>
-            <div class="main">
+            <div class="content column">
                 <h2>Careers @ Your Travel</h2>
                 <p>We are not actively seeking employees at this time. Thank you for your interest in joining us and please continue to check back for future updates.</p>
             </div>

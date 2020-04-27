@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿session_start()
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Contact Us</title>
@@ -67,8 +68,8 @@
 </head>
 <body>
     <div class="header">
-        <div><h1>Welcome, to Your Travel</h1>
-            <p>Travel <b>Your</b> way.</div>
+        <h1>Welcome, to Your Travel</h1>
+        <p>Travel <b>Your</b> way.</p>
     </div>
 
     <div class="navbar">
@@ -77,12 +78,12 @@
         <a href="destinationlandingpage.html">Destinations</a>
         <a href="suggestedforyou.html">Suggested for You</a>
         <a href="myaccount.html">My Account</a>
-        <a href="signupfor.html" class="right">Sign up here!</a>
-        <a href="loginpage.html" class="right">Login Here!</a>
+        <a href="registration.php" class="right">Sign up here!</a>
+        <a href="login.php" class="right">Login Here!</a>
     </div>
     <div class="clearfix">
-        <div class="row">
-            <div class="side">
+        <div class="column">
+            <div class="side column">
                 <h2>News/Updates</h2>
                 <h5>Full website launching soon!</h5>
                 <div><img src="webpage.png" alt="WebPage" style="height:200px;"></div>
@@ -93,13 +94,13 @@
                 <div class="fakeimg" style="height:60px;">some links to places</div><br>
                 <div class="fakeimg" style="height:60px;">some links to places</div>
             </div>
-            <div class="main">
-                <h1>Report A Bug</h1>
-                <h4>Use the form below to report a bug. We try our best to create a great site but it won't be perfect.</h4>
+            <div class="content column">
+                <h1>Contact Us</h1>
+                <h4>Use the form below to report a bug.</h4>
                 <form action="/action_page.php">
-                Topic: <br>
+                Topic:
                 <input type="text" name="topic" /><br />
-                Description: <br>
+                Description:
                 <textarea id="review" name="review"
                 rows="20"
                 cols="800" placeholder="Describe the bug you witnessed.."></textarea><br />

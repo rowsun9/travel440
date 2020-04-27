@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿session_start()
+<?php include('server.php') ?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Welcome, to Your Travel</title>
@@ -15,25 +17,31 @@
 
         .loginBox {
             position: absolute;
-            top: 50%;
-            left: 50%;
+            top: 5%;
+            left: 25%;
             transform: translate(-50%, -50%);
             width: 750px;
             height: 800px;
-            padding: 5px 10px;
+            padding: 20px 10px;
             box-sizing: border-box;
-            background: rgba(34, 32, 32, 0.8);
+            background: rgba(0,0,0,.5);
+        }
+
+        .user {
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+            position: absolute;
+            border-radius: 50%;
+            top: -50px;
+            left: 125px;
         }
 
         h2 {
             margin: 0;
-            padding: 0 0 0px;
-            color: #427ab9;
+            padding: 0 0 20px;
+            color: #efed40;
             text-align: center;
-        }
-
-        .loginBox form {
-            margin-left: 135px;
         }
 
         .loginBox label {
@@ -44,19 +52,19 @@
         }
 
         .loginBox input {
-            width: 80%;
-            margin-bottom: 10px;
-            opacity: .6;
+            width: 100%;
+            margin-bottom: 20px;
+            opacity: .4;
         }
 
         .loginBox textarea {
-            width: 80%;
+            width: 100%;
             border: none;
             outline: none;
             height: 60px;
             color: black;
             margin-bottom: 20px;
-            opacity: 0.6;
+            opacity: 0.3;
         }
 
         .loginBox input[type="text"],
@@ -69,20 +77,19 @@
             height: 30px;
             color: black;
             font-size: 16px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .loginBox input[type="submit"] {
-            width: 70%;
+            width: 100%;
             background-color: #4CAF50;
             color: white;
             padding: 14px 20px;
-            opacity: .5;
+            opacity: .3;
             margin: 8px 0;
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            margin-left: 28px;
         }
 
             .loginBox input[type="submit"]:hover {
@@ -94,7 +101,6 @@
             font-size: 14px;
             font-weight: bold;
             text-decoration: none;
-            float: right;
         }
         .loginBox p {
             color: #fff;
@@ -105,59 +111,60 @@
 <body>
 
     <div class="loginBox">
-        <h2>Sign Up Form</h2>
         <form style="display:block" method="post" action="register.php">
+            <?php include('errors.php'); ?>
+            <h2>Sign Up Form</h2>
             <label>
-                First Name: <br> 
+                First Name:
             </label>
-                <input type="text" placeholder="First Name" name="firstname" > <br> 
+                <input type="text" placeholder="First Name" name="firstname" value="<?php echo $firstname; ?>" />
                 <label>
-                    Last Name: <br> 
+                    Last Name:
                 </label>
-                <input type="text" placeholder="Last Name" name="lastname" > <br> 
+                <input type="text" placeholder="Last Name" name="lastname" value="<?php echo $lastname; ?>" />
             
                 <label>
-                    Date of Birth: <br> 
+                    Date of Birth:
                 </label>
-                <input type="date" placeholder="Date of Birth" name="dateofbirth" > <br> 
+                <input type="date" placeholder="Date of Birth" name="dateofbirth" value="<?php echo $dob; ?>" >
             
                 <label>
-                    Phone Number: <br> 
+                    Phone Number:
                 </label>
-                <input type="tel" name="phone"  placeholder="Phone Number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" > <br> 
+                <input type="tel" name="phone"  placeholder="Phone Number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" value="<?php echo $phone; ?>" >
             
                 <label>
-                    Email: <br> 
+                    Email:
                 </label>
-                <input type="email" placeholder="Enter Email" name="email" > <br> 
+                <input type="email" placeholder="Enter Email" name="email" value="<?php echo $email; ?>" >
             
                 <label>
-                    Username: <br> 
+                    Username:
                 </label>
-                <input type="text" placeholder="Enter a Username" name="username" > <br> 
+                <input type="text" placeholder="Enter a Username" name="username" value="<?php echo $username; ?>">
             
                 <label>
-                    Password: <br> 
+                    Password:
                 </label>
-                <input type="text" placeholder="Password" name="password" > <br> 
+                <input type="text" placeholder="Password" name="password" value="<?php echo $password; ?>" >
             
                 <label>
-                    Reenter Password: <br> 
+                    Reenter Password:
                 </label>
-                <input type="text" placeholder="Reenter Password" name="password2" > <br> 
+                <input type="text" placeholder="Reenter Password" name="password2" value="<?php echo $password2; ?>">
             
                 <label>
-                    About Me/Bio :<br />
+                    About Me/Bio:<br />
                 </label>
                 <textarea id="bio"
                           rows="3"
-                          cols="80" placeholder="Your Bio" ></textarea> <br> 
+                          cols="80" placeholder="Your Bio" value="<?php echo $bio; ?>" ></textarea>
             
                 <label>
-                    Favorite Destination: <br> 
+                    Favorite Destination:
                 </label>
-                <input type="text" placeholder="Favorite Destination" name="destination" > <br> 
-                <a href="loginpage.html">Already have an account?</a><br>
+                <input type="text" placeholder="Favorite Destination" name="destination" value="<?php echo $destination; ?>" >
+            
             <input type="submit" value="Register"/>
         </form>
     </div>
